@@ -24,12 +24,6 @@ class HabbitSerializeRetrieveAPIView(generics.RetrieveAPIView):
     serializer_class = HabbitSerializer
     permission_classes = [IsAuthenticated]
 
-    def get_queryset(self):
-        """Фильтрация запроса:
-        привычки текущего пользователя или публичные"""
-        user = self.request.user
-        return Habbit.objects.filter(Q(creator=user) | Q(is_public=True))
-
 
 class HabbitSerializeCreateAPIView(generics.CreateAPIView):
     serializer_class = HabbitSerializer

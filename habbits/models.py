@@ -32,7 +32,7 @@ class Habbit(models.Model):
     )
     reward = models.CharField(max_length=250, verbose_name="Вознаграждение", **NULLABLE)
     time_to_complete = models.PositiveSmallIntegerField(
-        default=120, verbose_name="Время на выполнение", **NULLABLE
+        default=120, verbose_name="Время выполнения", **NULLABLE
     )
     is_public = models.BooleanField(default=False, verbose_name="Признак публичности")
 

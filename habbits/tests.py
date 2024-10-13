@@ -32,7 +32,7 @@ class HabbitTestCase(APITestCase):
         """Тест CREATE habbit"""
 
         data = {
-            "place": "Дом",
+            "place": "Кухня",
             "time": "07:00:00",
             "action": "Пить чай",
             "is_pleasant": False,

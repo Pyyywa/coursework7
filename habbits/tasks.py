@@ -19,7 +19,7 @@ def send_message_habbit_telegram(*args, **kwargs):
         time_habbit = values.time.strftime("%H:%M:%S")  # время выполнения задачи
         time_now = datetime.datetime.now().strftime("%H:%M:%S")  # текущее время
         frequency = values.frequency  # периодичность выполнения
-        # дни недели для выполнения задачи, отсчёт от понедельника (0)
+        # отсчёт от понедельника (0)
         days_habbit_list = [x for x in range(1, 8, frequency)]
         week_day = datetime.datetime.now().weekday() + 1  # текущий день недели 1-7
 
